@@ -40,8 +40,9 @@
                                         "streamlit_app.py": `{{ post.stlite }}`
                                     },
                                     streamlitConfig: {
-                                        "ui.hideTopBar" : "true",
                                         "theme.base": "light", // Set the theme to light
+                                        "ui.hideTopBar" : "true",
+                                        "client.toolbarMode": "minimal"
                                     },
                                 },
                                 document.getElementById("stlite-app-{{ post.modal-id }}")
