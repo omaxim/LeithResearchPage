@@ -2,22 +2,22 @@ url: https://www.leithresearch.org/
 baseurl: ""
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
+title: Leith Research
+email: maxim.oweyssi@leith.org.uk
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Maxim Oweyssi
   pic: 1
-  position: Lead Designer
+  position: director
   social:
-    - title: twitter
+    - title: linkedin
+      url: https://www.linkedin.com/in/moweyssi/
+    - title: #facebook
       url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
+    - title: #stack-overflow
       url: #
 
 - name: Larry Parker
