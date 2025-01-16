@@ -1,12 +1,9 @@
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 364f6b  # Main dark blue
-  secondary: 3fc1c9  # Light cyan
-  accent: f5f5f5  # Light gray
-  tertiary: fc5185  # Pinkish red
-  secondary-dark: 333  # Dark gray for secondary elements
-  muted: 777  # Muted gray for text
-
+  primary: 3FC1C9
+  secondary: FC5185   
+  secondary-dark: 333
+  muted: 777
 # Font Families
 font:
   primary: 'League Spartan, "Helvetica Neue", Helvetica, Arial, sans-serif'  # League Spartan as the primary font
