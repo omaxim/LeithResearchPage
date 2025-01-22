@@ -872,7 +872,6 @@ body {
 }
 
 /* Default styles (Light mode) */
-#services, #about, #client {
-    background-color: #f8f9fa; /* Light background color */
-    color: #212529; /* Dark text color */
+#services, #about, #clients {
+    background-color: #fff; /* Light background color */
   }
