@@ -332,7 +332,7 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
-    color: #{{ site.data.template.color.headings }};
+    color
 }
 
 section h3.section-subheading {
@@ -375,6 +375,7 @@ section h3.section-subheading {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    background: rgba(63,193,201,.9); /* Fallback when no plugin support */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
@@ -867,7 +868,7 @@ body {
 }
 
 /* Default styles (Light mode) */
-#services, #about, #clients {
+#services, #about, #client {
     background-color: #f8f9fa; /* Light background color */
     color: #212529; /* Dark text color */
   }
