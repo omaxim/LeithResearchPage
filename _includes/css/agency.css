@@ -659,6 +659,8 @@ section h3.section-subheading {
 
 aside.clients img {
     margin: 50px auto;
+}
+aside.clients{
     background-color: #fff;
 }
 
