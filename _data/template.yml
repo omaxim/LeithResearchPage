@@ -5,6 +5,7 @@ color:
   tertiary: FC5185
   secondary-dark: 333
   muted: 777
+  headings: 000
 # Font Families
 font:
   primary: '"League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif'  # League Spartan as the primary font
