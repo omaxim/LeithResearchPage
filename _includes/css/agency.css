@@ -865,3 +865,9 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+
+/* Default styles (Light mode) */
+#services, #about, #client {
+    background-color: #f8f9fa; /* Light background color */
+    color: #212529; /* Dark text color */
+  }
