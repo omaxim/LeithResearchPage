@@ -874,4 +874,5 @@ body {
 /* Default styles (Light mode) */
 #services, #about, #clients {
     background-color: #fff; /* Light background color */
+    color: #{{ site.data.template.color.dark }}
   }
