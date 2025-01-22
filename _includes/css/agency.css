@@ -876,3 +876,7 @@ body {
     background-color: #fff; /* Light background color */
     color: #000;
   }
+/* Default styles (Light mode) */
+#team {
+    color: #000;
+  }
