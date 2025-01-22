@@ -332,6 +332,7 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
+    color
 }
 
 section h3.section-subheading {
@@ -374,7 +375,6 @@ section h3.section-subheading {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    background: rgba(254,209,54,.9); /* Fallback when no plugin support */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
