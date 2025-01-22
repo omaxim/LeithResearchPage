@@ -336,7 +336,7 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
-    color
+    color: #{{ site.data.template.color.dark }};
 }
 
 section h3.section-subheading {
@@ -874,5 +874,5 @@ body {
 /* Default styles (Light mode) */
 #services, #about, #clients {
     background-color: #fff; /* Light background color */
-    color: #{{ site.data.template.color.dark }}
+    color: #{{ site.data.template.color.dark }};
   }
