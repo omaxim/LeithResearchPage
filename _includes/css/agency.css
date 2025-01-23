@@ -292,7 +292,7 @@ fieldset[disabled] .btn-xl.active {
         display: block; /* Stack "Leith" and "Research" */
         font-size: 3.5rem; /* Larger font size for laptops */
         margin-bottom: 0.5rem; /* Reduce spacing between the two words */
-        margin-top: -1rem;
+        margin-top: -0.8rem;
         line-height: 1;
     }
 
