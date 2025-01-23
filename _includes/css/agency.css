@@ -185,6 +185,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "League Spartan","Helvetica Neue",Helvetica,Arial,cursive;
+    font-style: bold;
     color: #{{ site.data.template.color.primary }};
 }
 
