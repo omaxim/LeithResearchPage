@@ -5,7 +5,7 @@ layout: default
 modal-id: 7
 date: 2025-01-15
 img: myapp.png
-thumbnail: myapp-thumbnail.png
+thumbnail: streamlit-logo.svg
 alt: A Streamlit App
 project-date: January 2025
 client: OpenAI
