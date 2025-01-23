@@ -664,6 +664,15 @@ section h3.section-subheading {
 aside.clients img {
     margin: 50px auto;
 }
+aside.clients .row {
+    display: flex;
+    justify-content: space-evenly; /* Ensures equal spacing */
+    align-items: center;
+}
+
+aside.clients .invert-logo {
+    filter: invert(1); /* Inverts the colors */
+}
 
 section#contact {
     background-color: #222;
