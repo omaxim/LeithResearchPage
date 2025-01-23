@@ -205,6 +205,10 @@ fieldset[disabled] .btn-xl.active {
     display: block; /* Ensure it starts a new line */
 }
 
+.navbar-default.navbar-shrink .brand-research {
+    display: none; /* Hides the 'Research' span when navbar shrinks */
+}
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
