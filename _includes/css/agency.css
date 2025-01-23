@@ -303,7 +303,7 @@ fieldset[disabled] .btn-xl.active {
         display: block;
         font-size: 2.1rem;
         margin-left: 0; /* Align "Research" with "Leith" */
-        margin-top: -1.8rem; /* Bring it closer to "Leith" */
+        margin-top: -1.7rem; /* Bring it closer to "Leith" */
     }
 }
 
