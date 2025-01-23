@@ -186,7 +186,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand {
     font-style: normal; /* Ensure no unintended styles from inheritance */
     display: inline-block; /* Allows the text to stack properly */
-    text-align: center; /* Center-align text */
+    text-align: left; /* Center-align text */
     line-height: 0.4; /* Adjust spacing between lines if needed */
     color: #{{ site.data.template.color.primary }};
 }
@@ -201,7 +201,7 @@ fieldset[disabled] .btn-xl.active {
 .brand-research {
     font-family: "Times New Roman", Times, serif;
     font-weight: lighter; /* Regular weight for "Research" */
-    font-size: 2rem; /* Adjust size as needed */
+    font-size: 2.2rem; /* Adjust size as needed */
     display: block; /* Ensure it starts a new line */
 }
 
