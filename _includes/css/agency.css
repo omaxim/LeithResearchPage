@@ -199,9 +199,6 @@ fieldset[disabled] .btn-xl.active {
     transition: all 0.3s;
 }
 
-.navbar-default .navbar-brand:hover {
-    color: #fff;
-}
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
@@ -211,7 +208,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #{{ site.data.template.color.secondary }};
+    color: #fff;
 }
 
 .navbar-default .nav li a {
@@ -234,7 +231,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default.navbar-shrink .nav li a:hover,
 .navbar-default.navbar-shrink .nav li a:focus {
     outline: 0;
-    color: #{{ site.data.template.color.secondary }};
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>.active>a {
