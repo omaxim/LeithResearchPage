@@ -661,27 +661,16 @@ section h3.section-subheading {
     margin-top: 0;
 }
 
-#team .team-member {
-    margin: 0 auto; /* Center the individual team member block */
-}
-
-#team .d-flex {
-    display: flex; /* Enable flexbox for the container */
-    flex-wrap: wrap; /* Ensure rows wrap properly */
-    justify-content: center; /* Center items horizontally */
-    gap: 1rem; /* Add spacing between team members */
-}
-
 aside.clients img {
     margin: 50px auto;
 }
-aside.clients .row {
+.clients .row {
     display: flex;
     justify-content: space-evenly; /* Ensures equal spacing */
     align-items: center;
 }
 
-aside.clients .invert-logo {
+.clients .invert-logo {
     filter: invert(1); /* Inverts the colors */
 }
 
