@@ -196,7 +196,7 @@ fieldset[disabled] .btn-xl.active {
     font-weight: bold; /* Make "Leith" bold */
     font-size: 2rem; /* Adjust size as needed */
     display: inline; /* Ensure it starts a new line */
-    margin-bottom: .2rem;
+    margin-bottom: 0px;
 }
 
 .brand-research {
@@ -299,18 +299,16 @@ fieldset[disabled] .btn-xl.active {
         font-size: 1.5em;
     }
 
-    .navbar-default.navbar-shrink .brand-leith {
-        font-size: 3em; /* shrinks the 'Leith' span when navbar shrinks */
-    }
 
     .brand-leith {
         display: block; /* Display inline for single-line layout */
         font-size: 4rem; /* Adjust size for mobile */
+        margin-bottom: 0.4rem;
     }
 
     .brand-research {
         display: block; /* Display inline for single-line layout */
-        font-size: 2.2rem; /* Match the size of 'Leith' */
+        font-size: 2.4rem; /* Match the size of 'Leith' */
         font-family: "Times New Roman", Times, serif; /* Ensure correct font */
         font-weight: lighter; /* Maintain lighter font weight */
         margin-left: 0px; /* Add spacing between 'Leith' and 'Research' */
