@@ -273,11 +273,14 @@ fieldset[disabled] .btn-xl.active {
     margin-left: 0.1rem; /* Slight spacing between "Leith" and "Research" */
 }
 
-/* Hide "Research" on Scroll (Mobile) */
+/* Hide "Research" on Scroll */
 .navbar-default.navbar-shrink .brand-research {
     display: none;
 }
-
+/* Change "Leith" color on scroll */
+.navbar-default.navbar-shrink .brand-leith {
+    color: #{{ site.data.template.color.secondary }};
+}
 /* Responsive Adjustments for Laptops and Larger Screens */
 @media (min-width: 768px) {
     .navbar-default {
