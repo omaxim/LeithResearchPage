@@ -292,6 +292,19 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+    
+    .brand-leith {
+        display: inline; /* Display inline for single-line layout */
+        font-size: 1.5rem; /* Adjust size for mobile */
+    }
+
+    .brand-research {
+        display: inline; /* Display inline for single-line layout */
+        font-size: 1.5rem; /* Match the size of 'Leith' */
+        font-family: "Times New Roman", Times, serif; /* Ensure correct font */
+        font-weight: lighter; /* Maintain lighter font weight */
+        margin-left: 5px; /* Add spacing between 'Leith' and 'Research' */
+    }
 }
 
 header {
