@@ -189,6 +189,16 @@ fieldset[disabled] .btn-xl.active {
     color: #{{ site.data.template.color.primary }};
 }
 
+.brand-leith {
+    font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold; /* Make "Leith" bold */
+}
+
+.brand-research {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal; /* Make "Research" regular weight */
+}
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
