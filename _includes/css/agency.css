@@ -196,6 +196,7 @@ fieldset[disabled] .btn-xl.active {
     font-weight: bold; /* Make "Leith" bold */
     font-size: 2rem; /* Adjust size as needed */
     display: inline; /* Ensure it starts a new line */
+    margin-bottom: .2rem;
 }
 
 .brand-research {
@@ -305,7 +306,6 @@ fieldset[disabled] .btn-xl.active {
     .brand-leith {
         display: block; /* Display inline for single-line layout */
         font-size: 4rem; /* Adjust size for mobile */
-        margin-bottom: .1rem;
     }
 
     .brand-research {
