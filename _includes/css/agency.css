@@ -305,6 +305,7 @@ fieldset[disabled] .btn-xl.active {
     .brand-leith {
         display: block; /* Display inline for single-line layout */
         font-size: 4rem; /* Adjust size for mobile */
+        margin-bottom: .1rem;
     }
 
     .brand-research {
