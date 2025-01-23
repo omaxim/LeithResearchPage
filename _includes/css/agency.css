@@ -206,6 +206,10 @@ fieldset[disabled] .btn-xl.active {
     margin-left: 0.1rem; /* Add spacing between 'Leith' and 'Research' */
 }
 
+.navbar-default.navbar-shrink .brand-research {
+    display: none; /* Hides the 'Research' span when navbar shrinks */
+}
+
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
@@ -292,6 +296,10 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
+    }
+
+    .navbar-default.navbar-shrink .brand-leith {
+        font-size: 3em; /* shrinks the 'Leith' span when navbar shrinks */
     }
 
     .brand-leith {
