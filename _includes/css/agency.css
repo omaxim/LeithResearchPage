@@ -179,14 +179,14 @@ fieldset[disabled] .btn-xl.active {
 }
 /* General Navbar Styling */
 .navbar-default {
-    background-color: transparent;
+    background-color: #{{ site.data.template.color.secondary-dark }};
     padding: 15px 0; /* Consistent padding for all views */
     transition: all 0.3s;
 }
 
 .navbar-default.navbar-shrink {
     padding: 10px 0;
-    background-color: #222;
+    background-color: #{{ site.data.template.color.secondary-dark }};
 }
 
 
@@ -282,6 +282,7 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
     .navbar-default {
         padding: 25px 0;
+        background-color: transparent;
     }
 
     .navbar-default.navbar-shrink {
