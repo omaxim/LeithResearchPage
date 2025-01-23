@@ -177,141 +177,77 @@ fieldset[disabled] .btn-xl.active {
     color: #{{ site.data.template.color.primary }};
     background-color: #fff;
 }
-
+/* General Navbar Styling */
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    padding: 15px 0; /* Consistent padding for all views */
+    transition: all 0.3s;
 }
 
+.navbar-default.navbar-shrink {
+    padding: 10px 0;
+    background-color: #222;
+}
+
+/* Navbar Brand Styling */
 .navbar-default .navbar-brand {
-    font-style: normal; /* Ensure no unintended styles from inheritance */
-    display: inline-block; /* Allows the text to stack properly */
-    text-align: left; /* Center-align text */
-    line-height: 1.2; /* Adjust spacing between lines if needed */
+    display: inline-block;
+    text-align: left;
     color: #{{ site.data.template.color.primary }};
+    line-height: 1.2;
+    transition: all 0.3s;
 }
 
-.brand-leith {
-    font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold; /* Make "Leith" bold */
-    font-size: 2rem; /* Adjust size as needed */
-    display: inline; /* Ensure it starts a new line */
-    margin-bottom: 0px;
-}
-
-.brand-research {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: lighter; /* Regular weight for "Research" */
-    font-size: 2rem; /* Adjust size as needed */
-    display: inline; /* Ensure it starts a new line */
-    margin-left: 0.1rem; /* Add spacing between 'Leith' and 'Research' */
-}
-
-.navbar-default.navbar-shrink .brand-research {
-    display: none; /* Hides the 'Research' span when navbar shrinks */
-}
-
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
+.navbar-default .navbar-brand:hover {
     color: #{{ site.data.template.color.secondary }};
 }
 
-.navbar-default .navbar-collapse {
-    border-color: rgba(255,255,255,.02);
+/* Brand "Leith" */
+.brand-leith {
+    font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    display: inline-block; /* Ensures proper stacking */
+    margin-bottom: 0;
 }
 
-.navbar-default .navbar-toggle {
-    border-color: #{{ site.data.template.color.primary }};
-    background-color: #{{ site.data.template.color.primary }};
+/* Brand "Research" */
+.brand-research {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: lighter;
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 0.2rem; /* Slight spacing between "Leith" and "Research" */
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+/* Hide "Research" on Scroll (Mobile) */
+.navbar-default.navbar-shrink .brand-research {
+    display: none;
 }
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #{{ site.data.template.color.primary }};
-}
-
-.navbar-default .nav li a {
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #fff;
-    -webkit-transition: all ease .35s;
-    -moz-transition: all ease .35s;
-    transition: all ease .35s;
-}
-
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
-    outline: 0;
-    color: #{{ site.data.template.color.primary }};
-}
-
-.navbar-default .navbar-nav>.active>a {
-    border-radius: 0;
-    color: #fff;
-    background-color: #{{ site.data.template.color.primary }};
-}
-
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #{{ site.data.template.color.secondary }};
-}
-
-@media(min-width:768px) {
+/* Responsive Adjustments for Laptops and Larger Screens */
+@media (min-width: 768px) {
     .navbar-default {
         padding: 25px 0;
-        border: 0;
-        background-color: transparent;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-    .navbar-default.navbar-shrink .brand-research {
-        display: none; /* Hides the 'Research' span when navbar shrinks */
-    }
-    
-    .navbar-default .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
     }
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
     }
-
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-
 
     .brand-leith {
-        display: block; /* Display inline for single-line layout */
-        font-size: 4rem; /* Adjust size for mobile */
-        margin-bottom: 0.8rem;
+        display: block; /* Stack "Leith" and "Research" */
+        font-size: 3.5rem; /* Larger font size for laptops */
+        margin-bottom: 0.5rem; /* Reduce spacing between the two words */
+        line-height: 1;
     }
 
     .brand-research {
-        display: block; /* Display inline for single-line layout */
-        font-size: 2.4rem; /* Match the size of 'Leith' */
-        font-family: "Times New Roman", Times, serif; /* Ensure correct font */
-        font-weight: lighter; /* Maintain lighter font weight */
-        margin-left: 0px; /* Add spacing between 'Leith' and 'Research' */
+        display: block;
+        font-size: 2.2rem;
+        margin-left: 0; /* Align "Research" with "Leith" */
+        margin-top: -0.3rem; /* Bring it closer to "Leith" */
     }
 }
 
