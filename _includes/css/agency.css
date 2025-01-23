@@ -186,7 +186,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default.navbar-shrink {
     padding: 10px 0;
-    background-color: #{{ site.data.template.color.secondary-dark }};
+    background-color: #{{ site.data.template.color.primary }};
 }
 
 
@@ -279,7 +279,7 @@ fieldset[disabled] .btn-xl.active {
 }
 /* Change "Leith" color on scroll */
 .navbar-default.navbar-shrink .brand-leith {
-    color: #{{ site.data.template.color.secondary }};
+    color: #fff;
 }
 /* Responsive Adjustments for Laptops and Larger Screens */
 @media (min-width: 768px) {
