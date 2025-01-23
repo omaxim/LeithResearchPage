@@ -187,7 +187,7 @@ fieldset[disabled] .btn-xl.active {
     font-style: normal; /* Ensure no unintended styles from inheritance */
     display: inline-block; /* Allows the text to stack properly */
     text-align: left; /* Center-align text */
-    line-height: 0.4; /* Adjust spacing between lines if needed */
+    line-height: 1.2; /* Adjust spacing between lines if needed */
     color: #{{ site.data.template.color.primary }};
 }
 
@@ -203,7 +203,7 @@ fieldset[disabled] .btn-xl.active {
     font-weight: lighter; /* Regular weight for "Research" */
     font-size: 1.5rem; /* Adjust size as needed */
     display: inline; /* Ensure it starts a new line */
-    margin-left: 5px; /* Add spacing between 'Leith' and 'Research' */
+    margin-left: 0.1rem; /* Add spacing between 'Leith' and 'Research' */
 }
 
 
