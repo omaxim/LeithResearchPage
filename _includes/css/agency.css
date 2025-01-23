@@ -187,14 +187,14 @@ fieldset[disabled] .btn-xl.active {
     font-style: normal; /* Ensure no unintended styles from inheritance */
     display: inline-block; /* Allows the text to stack properly */
     text-align: center; /* Center-align text */
-    line-height: 1.2; /* Adjust spacing between lines if needed */
+    line-height: 0.2; /* Adjust spacing between lines if needed */
     color: #{{ site.data.template.color.primary }};
 }
 
 .brand-leith {
     font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold; /* Make "Leith" bold */
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 2rem; /* Adjust size as needed */
     display: block; /* Ensure it starts a new line */
 }
 
