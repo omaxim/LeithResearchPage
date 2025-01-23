@@ -194,14 +194,14 @@ fieldset[disabled] .btn-xl.active {
 .brand-leith {
     font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold; /* Make "Leith" bold */
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 2rem; /* Adjust size as needed */
     display: inline; /* Ensure it starts a new line */
 }
 
 .brand-research {
     font-family: "Times New Roman", Times, serif;
     font-weight: lighter; /* Regular weight for "Research" */
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 2rem; /* Adjust size as needed */
     display: inline; /* Ensure it starts a new line */
     margin-left: 0.1rem; /* Add spacing between 'Leith' and 'Research' */
 }
