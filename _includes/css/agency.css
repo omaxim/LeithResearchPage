@@ -275,7 +275,7 @@ fieldset[disabled] .btn-xl.active {
 
 /* Brand "Research" */
 .brand-research {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Bodoni Moda", Times, serif;
     font-weight: italic;
     font-size: 2.2rem;
     display: inline-block;
@@ -311,7 +311,7 @@ fieldset[disabled] .btn-xl.active {
         display: block;
         font-size: 2.3rem;
         margin-left: 0; /* Align "Research" with "Leith" */
-        margin-top: -1rem; /* Bring it closer to "Leith" */
+        margin-top: -1.1rem; /* Bring it closer to "Leith" */
     }
 }
 
@@ -335,7 +335,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: {{ site.data.template.font.primary }};
+    font-family: {{ site.data.template.font.secondary }};
     font-size: 22px;
     font-style: thin italic;
     line-height: 22px;

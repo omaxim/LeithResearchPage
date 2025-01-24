@@ -10,4 +10,4 @@ color:
 # Font Families
 font:
   primary: '"SUSE", "Helvetica Neue", Helvetica, Arial, sans-serif'  # League Spartan as the primary font
-  secondary: '"Times New Roman", serif'  # Times New Roman as the secondary font
+  secondary: '"Bodoni Moda","Times New Roman", serif'  # Bodoni Moda or Times New Roman as the secondary font
