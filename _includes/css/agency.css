@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "League Spartan","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "SUSE","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #{{ site.data.template.color.secondary-dark }};
 }
 
@@ -266,7 +266,7 @@ fieldset[disabled] .btn-xl.active {
 }
 /* Brand "Leith" */
 .brand-leith {
-    font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "SUSE", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 2rem;
     display: inline-block; /* Ensures proper stacking */
