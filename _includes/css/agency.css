@@ -256,10 +256,14 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink .navbar-toggle {
         display: block; /* Show only on small screens */
         border-color: transparent;
-        background-color: #{{ site.data.template.color.secondary }};
+        background-color: transparent; /* Default background is transparent */
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+    }
+
+    .navbar-default.navbar-shrink .navbar-toggle:hover {
+        background-color: #{{ site.data.template.color.secondary }}; /* Change to secondary color on hover */
     }
 }
-
 /* Brand "Leith" */
 .brand-leith {
     font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
