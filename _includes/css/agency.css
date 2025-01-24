@@ -274,8 +274,9 @@ fieldset[disabled] .btn-xl.active {
 .brand-leith {
     font-family: "SUSE", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: inline-block; /* Ensures proper stacking */
+    margin-top: -1rem;
     margin-bottom: 0;
 }
 
@@ -283,8 +284,9 @@ fieldset[disabled] .btn-xl.active {
 .brand-research {
     font-family: "Bodoni Moda", Times, serif;
     font-weight: thin;
-    font-size: 2.15rem;
+    font-size: 2.65rem;
     margin-left: -0.1rem;
+    margin-top: -1rem;
     display: inline-block;
 }
 
