@@ -277,7 +277,8 @@ fieldset[disabled] .btn-xl.active {
 .brand-research {
     font-family: "Bodoni Moda", Times, serif;
     font-weight: thin;
-    font-size: 2.2rem;
+    font-size: 2.15rem;
+    margin-left: -0.1rem;
     display: inline-block;
 }
 
@@ -309,7 +310,7 @@ fieldset[disabled] .btn-xl.active {
 
     .brand-research {
         display: block;
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: thin;
         margin-left: 0; /* Align "Research" with "Leith" */
         margin-top: -1.1rem; /* Bring it closer to "Leith" */
