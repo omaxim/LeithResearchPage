@@ -9,5 +9,5 @@ color:
 
 # Font Families
 font:
-  primary: '"League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif'  # League Spartan as the primary font
+  primary: '"SUSE", "Helvetica Neue", Helvetica, Arial, sans-serif'  # League Spartan as the primary font
   secondary: '"Times New Roman", serif'  # Times New Roman as the secondary font
