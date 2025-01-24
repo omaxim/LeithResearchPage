@@ -277,7 +277,7 @@ fieldset[disabled] .btn-xl.active {
 .brand-research {
     font-family: "Times New Roman", Times, serif;
     font-weight: thin;
-    font-size: 2rem;
+    font-size: 2.2rem;
     display: inline-block;
     margin-left: 0.05rem; /* Slight spacing between "Leith" and "Research" */
 }
@@ -304,13 +304,13 @@ fieldset[disabled] .btn-xl.active {
         display: block; /* Stack "Leith" and "Research" */
         font-size: 3.5rem; /* Larger font size for laptops */
         margin-bottom: 0.5rem; /* Reduce spacing between the two words */
-        margin-top: -0.8rem;
+        margin-top: -1rem;
         line-height: 1;
     }
 
     .brand-research {
         display: block;
-        font-size: 2.1rem;
+        font-size: 2.2rem;
         margin-left: 0; /* Align "Research" with "Leith" */
         margin-top: -1.7rem; /* Bring it closer to "Leith" */
     }
@@ -336,9 +336,9 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: {{ site.data.template.font.primary }};
+    font-family: {{ site.data.template.font.secondary }};
     font-size: 22px;
-    font-style: thin;
+    font-style: lighter;
     line-height: 22px;
 }
 
@@ -361,7 +361,7 @@ header .intro-text .intro-heading {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
         font-size: 40px;
-        font-style: thin;
+        font-style: lighter;
         line-height: 40px;
     }
 
