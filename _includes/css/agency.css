@@ -279,7 +279,6 @@ fieldset[disabled] .btn-xl.active {
     font-weight: thin;
     font-size: 2.2rem;
     display: inline-block;
-    margin-left: 0.05rem; /* Slight spacing between "Leith" and "Research" */
 }
 
 /* Hide "Research" on Scroll */
@@ -302,7 +301,7 @@ fieldset[disabled] .btn-xl.active {
 
     .brand-leith {
         display: block; /* Stack "Leith" and "Research" */
-        font-size: 3.5rem; /* Larger font size for laptops */
+        font-size: 4rem; /* Larger font size for laptops */
         margin-bottom: 0.5rem; /* Reduce spacing between the two words */
         margin-top: -1rem;
         line-height: 1;
@@ -312,7 +311,7 @@ fieldset[disabled] .btn-xl.active {
         display: block;
         font-size: 2.2rem;
         margin-left: 0; /* Align "Research" with "Leith" */
-        margin-top: -1.7rem; /* Bring it closer to "Leith" */
+        margin-top: -1.4rem; /* Bring it closer to "Leith" */
     }
 }
 
