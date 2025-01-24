@@ -231,7 +231,8 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default.navbar-shrink .nav li a:hover,
 .navbar-default.navbar-shrink .nav li a:focus {
     outline: 0;
-    color: #fff;
+    color: #{{ site.data.template.color.secondary }}; /* Text turns secondary */
+    background-color: transparent; /* Ensure background stays transparent */
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -436,7 +437,7 @@ section h3.section-subheading {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    background: rgba(63,193,201,.9); /* Fallback when no plugin support */
+    background: rgba(236,179,101,.9); /* Fallback when no plugin support */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
