@@ -276,10 +276,10 @@ fieldset[disabled] .btn-xl.active {
 /* Brand "Research" */
 .brand-research {
     font-family: "Times New Roman", Times, serif;
-    font-weight: lighter;
+    font-weight: thin;
     font-size: 2rem;
     display: inline-block;
-    margin-left: 0.1rem; /* Slight spacing between "Leith" and "Research" */
+    margin-left: 0.05rem; /* Slight spacing between "Leith" and "Research" */
 }
 
 /* Hide "Research" on Scroll */
