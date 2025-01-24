@@ -255,6 +255,8 @@ fieldset[disabled] .btn-xl.active {
 @media (max-width: 767px) {
     .navbar-default.navbar-shrink .navbar-toggle {
         display: block; /* Show only on small screens */
+        border-color: transparent;
+        background-color: #{{ site.data.template.color.secondary }};
     }
 }
 
