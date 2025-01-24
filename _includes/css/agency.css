@@ -228,13 +228,10 @@ fieldset[disabled] .btn-xl.active {
     color: #{{ site.data.template.color.primary }};
 }
 
+.navbar-default.navbar-shrink .nav li a:hover,
 .navbar-default.navbar-shrink .nav li a:focus {
     outline: 0;
     color: #fff;
-}
-.navbar-default.navbar-shrink .nav li a:hover {
-    outline: 0;
-    color: #{{ site.data.template.color.secondary }};
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -243,10 +240,11 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+/* Adjust hover/focus for active links */
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #{{ site.data.template.color.secondary }};
+    color: #{{ site.data.template.color.primary }}; /* Text turns primary on hover */
+    background-color: #{{ site.data.template.color.secondary }}; /* Background stays secondary */
 }
 
 /* Default State (No Hamburger) */
