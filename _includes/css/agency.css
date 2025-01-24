@@ -228,7 +228,9 @@ fieldset[disabled] .btn-xl.active {
     outline: 0;
     color: #{{ site.data.template.color.secondary }};
 }
-
+.navbar-default.navbar-shrink .nav li a {
+    color: #fff
+}
 .navbar-default.navbar-shrink .nav li a:hover,
 .navbar-default.navbar-shrink .nav li a:focus {
     outline: 0;
