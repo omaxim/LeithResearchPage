@@ -209,7 +209,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fff;
+    color: #{{ site.data.template.color.secondary }};
 }
 
 .navbar-default .nav li a {
