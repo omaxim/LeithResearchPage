@@ -417,7 +417,7 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-/* Optional: Change the background circle color on hover */
+/* Optional: Change the background \ color on hover */
 #services .fa-stack:hover .fa-stack-2x {
     color: #{{ site.data.template.color.secondary }}; /* Change the circle's color */
     transition: color 0.3s ease; /* Smooth transition effect */
@@ -941,7 +941,7 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+    webkit-tap-highlight-color: #{{ site.data.template.color.secondary }};
 }
 
 /* Default styles (Light mode) */
