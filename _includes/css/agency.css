@@ -958,9 +958,3 @@ aside.clients{
     background-color: #fff;
 }
 
-.highlight {
-    background-color: #{{ site.data.template.color.secondary }}; /* Highlight with a yellow background */
-    font-style: italic;        /* Make the text cursive (italic) */
-    padding: 0 5px;            /* Add padding for better readability */
-    border-radius: 4px;        /* Optional: round the corners of the highlight */
-}
