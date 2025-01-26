@@ -924,12 +924,12 @@ ul.social-buttons li a:active {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #{{ site.data.template.color.primary }};
+    background: #{{ site.data.template.color.secondary }};
 }
 
 ::selection {
     text-shadow: none;
-    background: #{{ site.data.template.color.primary }};
+    background: #{{ site.data.template.color.secondary }};
 }
 
 img::selection {
