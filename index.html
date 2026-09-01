@@ -1,20 +1,157 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leith Research — climate and energy analysis, built from the data up</title>
+  <meta name="description" content="Leith Research is an independent research consultancy in Edinburgh. We build the models, datasets and tools behind energy and climate policy for governments, think tanks and climate-finance labs in the UK and Central Europe.">
+  <link rel="canonical" href="https://www.leithresearch.org/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
 
-<div class="home">
-
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
+<nav class="nav">
+  <a class="wordmark" href="#top"><span class="wm-leith">leith</span><span class="wm-research">research</span></a>
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
+</nav>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<header class="hero">
+  <p class="eyebrow">Independent research consultancy · Edinburgh</p>
+  <h1>Climate and energy analysis,<br class="br"> <em>built from the data up.</em></h1>
+  <p class="lede">We use machine learning to estimate the energy efficiency of entire building stocks, and we model transition risk from climate scenarios and asset-level data. Governments, think tanks and climate-finance labs use the results. Small team, open methods, code you can run yourself.</p>
+  <p class="hero-links"><a class="btn" href="#work">See the work</a><a class="btn btn-ghost" href="mailto:maxim.oweyssi@leith.org.uk">Get in touch</a></p>
+</header>
 
-</div>
+<section class="strip">
+  <p>Worked with</p>
+  <ul class="logos">
+    <li><a href="https://www.mfcr.cz/" title="Ministry of Finance of the Czech Republic"><img src="img/logos/mfcr.png" alt="Ministry of Finance, Czech Republic"></a></li>
+    <li><a href="https://2et.cz/en/" title="2ET"><img class="inv" src="img/logos/2et.svg" alt="2ET"></a></li>
+    <li><a href="https://theiafinance.org/" title="Theia Finance Labs"><img src="img/logos/Theia.svg" alt="Theia Finance Labs"></a></li>
+  </ul>
+</section>
+
+<section id="what" class="section">
+  <h2>What we do</h2>
+  <div class="cols">
+    <div>
+      <h3>Machine learning for building efficiency</h3>
+      <p>Most buildings have never had an energy assessment. We train models on the ones that have, then estimate energy use and efficiency for every building in a country, with honest uncertainty. The results feed retrofit targeting, levy design and national policy costings.</p>
+    </div>
+    <div>
+      <h3>Climate scenarios, assets and transition risk</h3>
+      <p>Connecting IPCC and IEA scenarios to real power plants, factories and company revenues: scenario pipelines, capture-price and cash-flow models, and asset-level datasets that let banks and supervisors see where transition risk actually sits.</p>
+    </div>
+    <div>
+      <h3>Trade and industrial-policy analysis</h3>
+      <p>Product-level trade data turned into export-opportunity maps and green-complexity indicators, so ministries can see where a country's clean-tech strengths really are and where to place support.</p>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section section-alt">
+  <h2>Selected work</h2>
+  <p class="section-intro">A few projects, with the numbers that mattered. Click a card to see one chart from the work, aggregated so it can be shared.</p>
+
+  <div class="cards">
+
+    <article class="card" data-chart="epc" tabindex="0">
+      <p class="stat">3.9M<span>buildings</span></p>
+      <h3>Energy efficiency of every building in the Czech Republic</h3>
+      <p>Only a fraction of Czech buildings hold an energy performance certificate. We trained a model on the 262,000 that do and estimated energy use and an efficiency class for the other 3.7 million, with a full probability distribution for each building rather than a single guess. The national picture it produces is now used in policy costings.</p>
+      <p class="tags"><span>deep learning</span><span>ordinal classification</span><span>Ministry of Finance CZ</span></p>
+      <p class="card-link">View chart →</p>
+    </article>
+
+    <article class="card" data-chart="green" tabindex="0">
+      <p class="stat">5,605<span>product types</span></p>
+      <h3>Where Czech clean-tech exports can grow</h3>
+      <p>An interactive map of the Czech Republic's export potential in green technologies, built from world-trade data on every traded product and an economic-complexity model of what the country can plausibly make next. Used by 2ET to prioritise industrial-policy support.</p>
+      <p class="tags"><span>world trade data</span><span>economic complexity</span><span>2ET</span></p>
+      <p class="card-link">View chart →</p>
+    </article>
+
+    <article class="card" data-chart="levy" tabindex="0">
+      <p class="stat">331<span>local authorities</span></p>
+      <h3>Who pays when energy levies move from electricity to gas</h3>
+      <p>Estimating gas and electricity use by house type, heating system and local authority across England and Wales, from census heating data, floor-space statistics and metered consumption. An input to the debate on rebalancing policy costs between electricity and gas bills.</p>
+      <p class="tags"><span>ONS census</span><span>metered consumption</span><span>UK</span></p>
+      <p class="card-link">View chart →</p>
+    </article>
+
+    <article class="card" data-chart="mcpr" tabindex="0">
+      <p class="stat">0.8×<span>the average price</span></p>
+      <h3>Transition risk at asset level with Theia Finance Labs</h3>
+      <p>Climate scenarios give one average electricity price per country, but a solar farm doesn't earn it and a gas plant earns more. We support <a href="https://theiafinance.org/">Theia Finance Labs</a> with the data and models that turn scenarios into asset-level revenues: capture-price ratios, scenario-to-asset pipelines and global facility datasets.</p>
+      <p class="tags"><span>electricity markets</span><span>IEA / IPCC scenarios</span><span>Theia Finance Labs</span></p>
+      <p class="card-link">View chart →</p>
+    </article>
+
+    <article class="card">
+      <p class="stat">1,700<span>public buildings</span></p>
+      <h3>Do energy certificates match real consumption?</h3>
+      <p>Linking energy certificates for around 1,700 Czech public buildings to their metered energy bills to measure how far the paperwork sits from reality, and what that means for policies that rely on certificate ratings.</p>
+      <p class="tags"><span>record linkage</span><span>public buildings</span><span>Ministry of Finance CZ</span></p>
+    </article>
+
+    <article class="card">
+      <h3>Supporting tilt</h3>
+      <p><a href="https://www.tiltproject.eu/">tilt</a> helps banks understand the climate transition exposure of the small and medium-sized companies they lend to, by mapping what those companies make to emissions data and transition indicators. We supported the data engineering behind it.</p>
+      <p class="tags"><span>SME transition risk</span><span>data pipelines</span></p>
+      <p class="card-link"><a href="https://www.tiltproject.eu/">tiltproject.eu →</a></p>
+    </article>
+
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <h2>Team</h2>
+  <p class="section-intro">Leith Research was set up in Edinburgh in 2024. We publish what we can: methods, code and data notes are open by default, and we hand over work the client can keep running without us.</p>
+  <div class="people">
+    <div class="person">
+    
+      <img class="portrait" src="img/team/1.jpg" alt="Maxim Oweyssi">
+      <h3>Maxim Oweyssi</h3>
+      <p class="role">Founder</p>
+      <p>Trained as a physicist, working on X-ray galaxy clusters and cosmic-microwave-background analysis in Heidelberg, before moving into climate and energy policy. Since then: building-stock and energy modelling for the Czech and UK governments, and asset-level climate-risk data with Theia Finance Labs.</p>
+      <p class="social"><a href="https://www.linkedin.com/in/moweyssi/">LinkedIn</a><a href="https://github.com/omaxim">GitHub</a><a href="https://bsky.app/profile/moweyssi.bsky.social">Bluesky</a></p>
+    </div>
+    <div class="person">
+      <img class="portrait" src="img/team/jakub.jpg" alt="Jakub Červenka">
+      <h3>Jakub Červenka</h3>
+      <p class="role">Collaborator</p>
+      <p>Economist specialising in climate and financial risk. Programme lead for the 1in1000 climate stress-testing initiative at Theia Finance Labs in Berlin, run jointly with the University of Oxford Sustainable Finance Group, and adviser to central banks and development banks on climate stress tests. Previously stress-test modelling at the European Central Bank and risk advisory at Deloitte.</p>
+      <p class="social"><a href="https://www.linkedin.com/in/jakub-%C4%8Dervenka/">LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <h2>Got a dataset and a question?</h2>
+  <p>We take on short, well-defined projects and longer modelling engagements. Write to us and we'll reply within a couple of days.</p>
+  <p><a class="btn" href="mailto:maxim.oweyssi@leith.org.uk">maxim.oweyssi@leith.org.uk</a></p>
+</section>
+
+<footer>
+  <a class="wordmark wordmark-lg" href="#top"><span class="wm-leith">leith</span><span class="wm-research">research</span></a>
+  <p>© <span id="year">2026</span> Leith Research · Edinburgh, Scotland</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+<dialog id="chart-dialog">
+  <button class="close" aria-label="Close" onclick="this.closest('dialog').close()">×</button>
+  <h3 id="chart-title"></h3>
+  <p id="chart-note"></p>
+  <div class="chart-wrap"><canvas id="chart"></canvas></div>
+</dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+</body>
+</html>
