@@ -114,3 +114,4 @@ dialog .close { position: absolute; top: .8rem; right: 1rem; border: 0; backgrou
 .logos img[src$="mfcr.png"] { height: 56px; }
 
 #chart-img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
+[hidden] { display: none !important; }
