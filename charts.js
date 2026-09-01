@@ -15,12 +15,18 @@ const CHARTS = {
         plugins: { tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y}%` } } } } })
   },
   green: {
-    title: 'Czech exports of green products by group, 2022',
-    note: 'CZK billion. Products in the 2ET Navigator clean-tech taxonomy, from CEPII BACI world-trade data at the 6-digit product level.',
-    config: d => ({ type: 'bar',
-      data: { labels: Object.keys(d), datasets: [{ label: 'Exports 2022', data: Object.values(d), backgroundColor: WINE }] },
-      options: { indexAxis: 'y', scales: { x: { title: { display: true, text: 'CZK bn' }, beginAtZero: true }, y: { grid: { display: false } } },
-        plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => ` ${c.parsed.x} bn CZK` } } } } })
+    title: 'Czech green export opportunities, 2024',
+    note: 'One bubble per green product (HS6). Right = closer to what Czechia already makes well; up = more complex, harder-to-copy product. Bubble size = Czech exports. Hover a bubble for details, click a legend entry to isolate a group.',
+    config: d => { const vals = Object.values(d.groups).flatMap(g => g.data.map(p => p.v)); const lo = Math.sqrt(Math.min(...vals) + 1), hi = Math.sqrt(Math.max(...vals) + 1);
+      const r = v => 3 + 22 * (Math.sqrt(v + 1) - lo) / (hi - lo);
+      const sets = Object.entries(d.groups).map(([label, g]) => ({ label, base: g.color, data: g.data.map(p => ({ ...p, r: r(p.v) })), backgroundColor: g.color + 'B3', borderColor: g.color, borderWidth: 1, hoverBorderWidth: 2 }));
+      return { type: 'bubble', data: { datasets: sets },
+        options: { animation: { duration: 400 },
+          scales: { x: { min: 0, max: 100, title: { display: true, text: 'Relatedness to current Czech exports (percentile)' } }, y: { min: 0, max: 100, title: { display: true, text: 'Product complexity (percentile)' } } },
+          onHover: (e, els, ch) => { const on = els.length ? els[0].datasetIndex : -1; ch.data.datasets.forEach((ds, i) => { const a = on < 0 ? 'B3' : i === on ? 'FF' : '14'; ds.backgroundColor = ds.base + a; ds.borderColor = ds.base + (on < 0 || i === on ? 'FF' : '14'); }); ch.update('none'); },
+          plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { size: 11 } },
+              onClick: (e, item, lg) => { const ch = lg.chart, i = item.datasetIndex; const solo = ch._solo === i; ch.data.datasets.forEach((ds, j) => ch.setDatasetVisibility(j, solo || j === i)); ch._solo = solo ? null : i; ch.update(); } },
+            tooltip: { displayColors: false, callbacks: { title: c => c[0].raw.n, label: c => [` HS ${c.raw.hs} · ${c.dataset.label}`, ` Exports 2024: $${c.raw.v.toLocaleString()} M`, ` Relatedness ${c.raw.x}th pct · complexity ${c.raw.y}th pct`] } } } } } }
   },
   levy: {
     title: 'How homes are heated, by house type',

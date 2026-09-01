@@ -110,5 +110,5 @@ dialog::backdrop { background: rgba(27, 26, 25, .55); backdrop-filter: blur(3px)
 dialog h3 { margin-right: 2.5rem; }
 dialog p { color: var(--ink-2); font-size: .9rem; margin: 0 0 1.2rem; }
 dialog .close { position: absolute; top: .8rem; right: 1rem; border: 0; background: none; font-size: 1.8rem; line-height: 1; cursor: pointer; color: var(--muted); }
-.chart-wrap { position: relative; height: min(440px, 60vh); }
+.chart-wrap { position: relative; height: min(520px, 65vh); }
 .logos img[src$="mfcr.png"] { height: 56px; }
