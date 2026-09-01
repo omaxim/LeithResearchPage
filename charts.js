@@ -4,19 +4,9 @@ Chart.defaults.color = INK;
 Chart.defaults.borderColor = LINE;
 
 const CHARTS = {
-  epc: {
-    title: 'Estimated energy-efficiency class of the Czech building stock',
-    note: 'Share of buildings per class (A best, G worst), summed from per-building probabilities. Family houses n = 1.82 M, apartment buildings n = 122 k.',
-    config: d => ({ type: 'bar',
-      data: { labels: d.classes, datasets: [
-        { label: 'Family houses', data: d['Family houses'], backgroundColor: WINE },
-        { label: 'Apartment buildings', data: d['Apartment buildings'], backgroundColor: SLATE } ] },
-      options: { scales: { y: { title: { display: true, text: '% of buildings' }, beginAtZero: true }, x: { grid: { display: false } } },
-        plugins: { tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y}%` } } } } })
-  },
   green: {
     title: 'Czech green export opportunities, 2024',
-    note: 'One bubble per green product (HS6). Right = closer to what Czechia already makes well; up = more complex, harder-to-copy product. Bubble size = Czech exports. Hover a bubble for details, click a legend entry to isolate a group.',
+    note: 'One bubble per green product. Further right: closer to what the Czech Republic already exports well. Higher up: more complex, harder-to-copy product. Bubble size: 2024 export value. Hover for details; click a legend entry to show one group on its own.',
     config: d => { const vals = Object.values(d.groups).flatMap(g => g.data.map(p => p.v)); const lo = Math.sqrt(Math.min(...vals) + 1), hi = Math.sqrt(Math.max(...vals) + 1);
       const r = v => 3 + 22 * (Math.sqrt(v + 1) - lo) / (hi - lo);
       const sets = Object.entries(d.groups).map(([label, g]) => ({ label, base: g.color, data: g.data.map(p => ({ ...p, r: r(p.v) })), backgroundColor: g.color + 'B3', borderColor: g.color, borderWidth: 1, hoverBorderWidth: 2 }));
@@ -39,7 +29,7 @@ const CHARTS = {
   },
   mcpr: {
     title: 'What each technology earns relative to the average electricity price',
-    note: 'Market capture price ratio: generation-weighted price ÷ time-weighted average price. Median across 156 market zones; bars show the interquartile range. Below 1 means a technology sells when prices are low.',
+    note: 'Below 1 means a technology mostly sells when prices are low, so it earns less than the average price. Median across 156 electricity market zones; bars show the middle half of zones. The ratio is the average price a technology receives per unit generated, divided by the time-averaged market price.',
     config: d => { const techs = Object.keys(d).sort((a, b) => d[a][1] - d[b][1]);
       return { type: 'bar',
         data: { labels: techs, datasets: [
@@ -53,7 +43,7 @@ const CHARTS = {
 let chart;
 const dlg = document.getElementById('chart-dialog');
 const IMAGES = {
-  'img/work/epc-map.jpg': { title: 'Estimated energy use of the Czech building stock, by municipality', note: 'Mean predicted delivered energy per m² for all 3.9 million buildings, aggregated to 6,258 municipalities. Screenshot of the interactive map delivered to the Ministry of Finance; the underlying data is theirs to publish.' }
+  'img/work/epc-map.jpg': { title: 'Estimated energy use of the Czech building stock, by municipality', note: 'Average estimated energy use per square metre across all 3.9 million buildings, shown for 6,258 municipalities. Screenshot of the interactive map built for the Czech Ministry of Finance; the underlying data is theirs to publish.' }
 };
 function openImage(src) {
   const c = IMAGES[src]; if (!c) return;
@@ -61,7 +51,7 @@ function openImage(src) {
   document.getElementById('chart-note').textContent = c.note;
   if (chart) { chart.destroy(); chart = null; }
   document.getElementById('chart').hidden = true;
-  const im = document.getElementById('chart-img'); im.src = src; im.hidden = false;
+  const im = document.getElementById('chart-img'); im.src = src; im.alt = c.title; im.hidden = false;
   dlg.showModal();
 }
 function openChart(key) {
