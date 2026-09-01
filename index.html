@@ -62,12 +62,12 @@
 
   <div class="cards">
 
-    <article class="card" data-chart="epc" tabindex="0">
+    <article class="card" data-img="img/work/epc-map.jpg" tabindex="0">
       <p class="stat">3.9M<span>buildings</span></p>
-      <h3>Energy efficiency of every building in the Czech Republic</h3>
-      <p>Only a fraction of Czech buildings hold an energy performance certificate. We trained a model on the 262,000 that do and estimated energy use and an efficiency class for the other 3.7 million, with a full probability distribution for each building rather than a single guess. The national picture it produces is now used in policy costings.</p>
-      <p class="tags"><span>deep learning</span><span>ordinal classification</span><span>Ministry of Finance CZ</span></p>
-      <p class="card-link">View chart →</p>
+      <h3>A virtual energy certificate for every building in the Czech Republic</h3>
+      <p>Only a fraction of Czech buildings hold an energy performance certificate. Linking administrative registers, metered consumption and the 262,000 certificates that do exist, we built an ensemble model with a mixture density network that estimates energy use and an efficiency class for all 3.9 million buildings, with a full probability distribution for each rather than a single guess. Delivered as an interactive map down to municipality level.</p>
+      <p class="tags"><span>deep learning</span><span>mixture density network</span><span>record linkage</span><span>Ministry of Finance CZ</span></p>
+      <p class="card-link">View map →</p>
     </article>
 
     <article class="card" data-chart="green" tabindex="0">
@@ -120,7 +120,7 @@
       <img class="portrait" src="img/team/1.jpg" alt="Maxim Oweyssi">
       <h3>Maxim Oweyssi</h3>
       <p class="role">Founder</p>
-      <p>Trained as a physicist, working on X-ray galaxy clusters and cosmic-microwave-background analysis in Heidelberg, before moving into climate and energy policy. Since then: building-stock and energy modelling for the Czech and UK governments, and asset-level climate-risk data with Theia Finance Labs.</p>
+      <p>Trained as a physicist at the Max Planck Institute for Astronomy in Heidelberg, estimating the masses of galaxy clusters from X-ray images, before moving into climate and energy policy. Since then: building-stock and energy modelling for the Czech and UK governments, and asset-level climate-risk data with Theia Finance Labs.</p>
       <p class="social"><a href="https://www.linkedin.com/in/moweyssi/">LinkedIn</a><a href="https://github.com/omaxim">GitHub</a><a href="https://bsky.app/profile/moweyssi.bsky.social">Bluesky</a></p>
     </div>
     <div class="person">
@@ -148,7 +148,7 @@
   <button class="close" aria-label="Close" onclick="this.closest('dialog').close()">×</button>
   <h3 id="chart-title"></h3>
   <p id="chart-note"></p>
-  <div class="chart-wrap"><canvas id="chart"></canvas></div>
+  <div class="chart-wrap"><canvas id="chart"></canvas><img id="chart-img" alt="" hidden></div>
 </dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="data.js"></script>

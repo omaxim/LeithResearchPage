@@ -98,9 +98,9 @@ footer .wordmark { margin-bottom: .8rem; }
 @media (max-width: 640px) { .br { display: none; } }
 .logos img { height: 40px; filter: none; opacity: .9; }
 .logos img.inv { filter: invert(1); }
-.card[data-chart] { cursor: pointer; transition: border-color .15s, transform .15s; }
-.card[data-chart]:hover, .card[data-chart]:focus-visible { border-color: var(--wine); transform: translateY(-2px); outline: none; }
-.card[data-chart] .card-link { color: var(--wine); }
+.card[data-chart], .card[data-img] { cursor: pointer; transition: border-color .15s, transform .15s; }
+.card[data-chart]:hover, .card[data-img]:hover, .card[data-chart]:focus-visible, .card[data-img]:focus-visible { border-color: var(--wine); transform: translateY(-2px); outline: none; }
+.card[data-chart] .card-link, .card[data-img] .card-link { color: var(--wine); }
 .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 1rem; }
 .person .portrait { width: 180px; border-radius: 50%; margin-bottom: 1.2rem; }
 .person h3 { margin-bottom: .1em; }
@@ -112,3 +112,5 @@ dialog p { color: var(--ink-2); font-size: .9rem; margin: 0 0 1.2rem; }
 dialog .close { position: absolute; top: .8rem; right: 1rem; border: 0; background: none; font-size: 1.8rem; line-height: 1; cursor: pointer; color: var(--muted); }
 .chart-wrap { position: relative; height: min(520px, 65vh); }
 .logos img[src$="mfcr.png"] { height: 56px; }
+
+#chart-img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }

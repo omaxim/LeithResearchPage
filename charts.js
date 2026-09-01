@@ -52,16 +52,30 @@ const CHARTS = {
 
 let chart;
 const dlg = document.getElementById('chart-dialog');
+const IMAGES = {
+  'img/work/epc-map.jpg': { title: 'Estimated energy use of the Czech building stock, by municipality', note: 'Mean predicted delivered energy per m² for all 3.9 million buildings, aggregated to 6,258 municipalities. Screenshot of the interactive map delivered to the Ministry of Finance; the underlying data is theirs to publish.' }
+};
+function openImage(src) {
+  const c = IMAGES[src]; if (!c) return;
+  document.getElementById('chart-title').textContent = c.title;
+  document.getElementById('chart-note').textContent = c.note;
+  if (chart) { chart.destroy(); chart = null; }
+  document.getElementById('chart').hidden = true;
+  const im = document.getElementById('chart-img'); im.src = src; im.hidden = false;
+  dlg.showModal();
+}
 function openChart(key) {
   const c = CHARTS[key]; if (!c) return;
+  document.getElementById('chart-img').hidden = true; document.getElementById('chart').hidden = false;
   document.getElementById('chart-title').textContent = c.title;
   document.getElementById('chart-note').textContent = c.note;
   if (chart) chart.destroy();
   chart = new Chart(document.getElementById('chart'), c.config(DATA[key]));
   dlg.showModal();
 }
-document.querySelectorAll('[data-chart]').forEach(el => {
-  el.addEventListener('click', e => { if (e.target.closest('a')) return; openChart(el.dataset.chart); });
-  el.addEventListener('keydown', e => { if (e.key === 'Enter') openChart(el.dataset.chart); });
+document.querySelectorAll('[data-chart], [data-img]').forEach(el => {
+  const open = () => el.dataset.img ? openImage(el.dataset.img) : openChart(el.dataset.chart);
+  el.addEventListener('click', e => { if (e.target.closest('a')) return; open(); });
+  el.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
 });
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
